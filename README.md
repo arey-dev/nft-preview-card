@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Here is my solution](https://www.frontendmentor.io/solutions/preview-card-built-using-css-flexbox-BJkIassUc)
+- Live Site URL: [Here is the live site](https://arey-dev.github.io/nft-preview-card-component-main/)
 
 ## My process
 
