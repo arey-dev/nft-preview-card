@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+  /* font color*/
+  --color-primary: hsl(215, 51%, 70%);
+  --color-primary-light: hsl(178, 100%, 50%);
+
+  /* bg color */
+  --color-bg-main: hsl(217, 54%, 11%);
+  --color-bg-card: hsl(216, 50%, 16%);
+  --color-bg-overlay: hsla(178, 100%, 50%, 0.5);
+
+  /* neutral */
+  --color-neutral-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body { 
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+}
+
+main {
+  /* Center the card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--color-bg-main);
+  width: clamp(375px, 100%, 1440px);
+  min-height: 100vh;
+}
+
+.card {
+  background: var(--color-bg-card); 
+  max-width: 252px;
+  border-radius: 0.625em;
+  padding: 1em;
+
+  /* shadow */
+  box-shadow: 0em 1em 0.25em 0.625em rgba(0, 0, 0, 0.1),
+  0em 1em 0.25em 2em rgba(0, 0, 0, 0.05);
+}
+
+
+/* adds margin-bottom to ALL descendants of card, EXCEPT last */
+.card > *:not(:last-child) {
+  margin-bottom: 0.875em;
+}
+
+.card__img-container {
+  width: inherit;
+  min-height: 252px;
+  background: url('/images/image-equilibrium.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.375em;
+}
+
+/* style for active state */
+.card__img-container--overlay {
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  width: inherit;
+  min-height: inherit;
+  background-color: var(--color-bg-overlay);
+  border-radius: 0.375em;
+  visibility: hidden;
+}
+
+.card__title {
+  display: inline-block;
+  color: var(--white);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.card__description {
+  color: var(--color-primary);
+  font-size: 0.975rem;
+  font-weight: 300;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__info--right,
+.card__info--left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.25em;
+}
+
+.card__info--left-icon {
+  width: 0.5625rem;
+}
+
+
+.card__info--left-price {
+  color: var(--color-primary-light);
+  font-size: 0.9375rem;
+}
+
+.card__info--right-icon {
+  width: 0.75rem;
+  height: 0.875rem;
+}
+
+.card__info--right-availability {
+  color: var(--color-primary);
+  font-size: 0.875rem;
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  padding: 0.625em 0 0.375em 0;
+  border-top: 1px solid var(--color-neutral-line);
+}
+
+.card__footer-avatar {
+  width: 1.5rem;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  margin-right: .75em;
+}
+
+.card__footer-credits {
+  color: var(--color-primary);
+  font-size: 0.875rem;
+
+}
+
+.card__footer-credits .name {
+  color: var(--white);
+}
+
+.card__img-container:hover {
+  cursor: pointer;
+}
+
+.card__img-container:active .card__img-container--overlay {
+  visibility: visible;
+}
+
+.card__title:hover {
+  cursor: pointer;
+}
+
+.card__title:active {
+  color: var(--color-primary-light);
+}
+
+.name:hover {
+  cursor: pointer;
+}
+
+.name:active {
+  color: var(--color-primary-light);
+}
